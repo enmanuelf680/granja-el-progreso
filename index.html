@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conoce la finca familiar El Progreso, sus servicios ganaderos y sus productos de leche y carne bovina.">
+  <title>El Progreso | Finca ganadera</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body id="inicio">
+  <a class="skip" href="#contenido">Ir al contenido</a>
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="#inicio"><img class="mark" src="assets/logo.svg" alt="" width="43" height="43"><span>El Progreso<small>FINCA GANADERA</small></span></a>
+      <button class="toggle" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav id="nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#productos">Productos</a><a href="#galeria">Galería</a><a class="button" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo">
+      <img class="hero-image" src="assets/pastizales.webp" alt="Ganado pastando en un paisaje verde de montaña" fetchpriority="high">
+      <div class="wrap hero-content">
+        <p class="eyebrow">FINCA GANADERA FAMILIAR</p>
+        <h1 id="titulo">El Progreso</h1>
+        <p class="slogan">Del campo, con cuidado.</p>
+        <p>Conoce nuestra producción de leche y carne bovina y el trabajo que hay detrás de cada producto.</p>
+        <a class="button light" href="#contacto">Contáctanos <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section id="nosotros" class="wrap section">
+      <div class="split">
+        <div>
+          <p class="eyebrow">NOSOTROS</p><h2>Una finca de familia</h2>
+          <p>El Progreso nació como una empresa familiar dedicada a la producción de leche y carne bovina. En los últimos años ha aumentado su producción y busca acercarse a clientes, inversionistas y visitantes.</p>
+          <p><strong>Nuestro equipo</strong> reúne a la familia que administra la finca y al personal que cuida el ganado, realiza el ordeño y mantiene las instalaciones.</p>
+        </div>
+        <figure><img src="assets/equipo.webp" alt="Personal ganadero atendiendo a un ternero en un establo" loading="lazy"><figcaption>Imagen ilustrativa del trabajo en la finca.</figcaption></figure>
+      </div>
+      <div class="values">
+        <article><h3>Misión</h3><p>Producir leche y carne con prácticas responsables y atención al bienestar del ganado.</p></article>
+        <article><h3>Visión</h3><p>Crecer como finca familiar y construir relaciones duraderas con nuestros clientes.</p></article>
+        <article><h3>Valores</h3><p>Responsabilidad, cuidado animal, trabajo en equipo y respeto por el campo.</p></article>
+      </div>
+    </section>
+    <section id="servicios" class="section band"><div class="wrap">
+      <p class="eyebrow">SERVICIOS</p><h2>Lo que hacemos en la finca</h2>
+      <div id="lista-servicios" class="cards"></div>
+    </div></section>
+    <section id="productos" class="section wrap">
+      <p class="eyebrow">PRODUCTOS</p><h2>Del campo a tu mesa</h2>
+      <p>Precios referenciales en pesos dominicanos. Catálogo de muestra.</p>
+      <div id="lista-productos" class="cards"></div>
+    </section>
+    <section id="galeria" class="section band"><div class="wrap">
+      <p class="eyebrow">GALERÍA</p><h2>Un recorrido por el campo</h2>
+      <p>Selecciona una imagen para verla en grande. Las fotografías son ilustrativas.</p>
+      <div id="lista-galeria" class="gallery"></div>
+    </div></section>
+    <section id="contacto" class="section wrap">
+      <p class="eyebrow">CONTACTO</p><h2>Hablemos</h2>
+      <div class="split contact">
+        <div>
+          <p>Datos de contacto de ejemplo para la presentación del proyecto.</p>
+          <address><strong>Dirección de referencia</strong><br>La Vega, República Dominicana<br><br><strong>Teléfono</strong><br>+1 809 555 0147<br><br><strong>Correo</strong><br>contacto@elprogreso.example<br><br><strong>Horario</strong><br>Lunes a viernes, 8:00 a. m. a 5:00 p. m.<br>Sábado, 8:00 a. m. a 12:00 p. m.</address>
+        </div>
+        <form id="form-contacto">
+          <label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="name" required maxlength="100">
+          <label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" autocomplete="email" required>
+          <label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="4" required maxlength="1000"></textarea>
+          <button class="button" type="submit">Simular envío</button><p id="form-estado" role="status" aria-live="polite"></p>
+          <small>Formulario de demostración. Los datos no se envían ni se guardan.</small>
+        </form>
+      </div>
+      <iframe class="map" src="https://maps.google.com/maps?q=La%20Vega%2C%20Republica%20Dominicana&amp;z=12&amp;output=embed" title="Mapa de referencia de La Vega en Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><span>El Progreso · Finca ganadera</span><span>Proyecto académico · Datos y fotografías ilustrativos</span></div></footer>
+  <dialog id="foto" aria-labelledby="foto-titulo">
+    <div class="dialog-bar"><strong id="foto-titulo"></strong><form method="dialog"><button type="submit" aria-label="Cerrar imagen">✕</button></form></div>
+    <img id="foto-ampliada" alt="">
+  </dialog>
+</body>
+</html>
